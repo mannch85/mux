@@ -1,3 +1,4 @@
+import 'hammerjs';
 /*
  * Entry point of the application.
  * Only platform bootstrapping code should be here.
@@ -7,7 +8,7 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from '@app/app.module';
+import { AppModule } from './app/app.module';
 import { environment } from '@env/environment';
 import { hmrBootstrap } from './hmr';
 
