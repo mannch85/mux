@@ -5,7 +5,6 @@ import { SideNavService } from '../side-nav.service';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
-  // providers: [SideNavService]
 })
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle = new EventEmitter<void>();

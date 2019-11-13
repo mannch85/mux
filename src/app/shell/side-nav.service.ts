@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 // import { DrawerComponent } from './drawer/drawer.component';
 import { MatSidenav } from '@angular/material';
 
-@Injectable()
+@Injectable(
+  {providedIn: 'root'}
+)
 export class SideNavService {
   private sidenav: MatSidenav;
   constructor() {}
