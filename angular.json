@@ -155,5 +155,10 @@
   "defaultProject": "web-ux",
   "cli": {
     "analytics": "be12b498-5d2a-4d76-bcd1-c0775d4b6f27"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
   }
 }

@@ -1,49 +1,37 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="https://github.com/ngx-rocket" translate>APP_NAME</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      aria-controls="navbar-menu"
-      aria-label="Toggle navigation"
-      (click)="toggleMenu()"
-      [attr.aria-expanded]="!menuHidden"
-    >
-      <span class="navbar-toggler-icon"></span>
+<mat-toolbar-row color="primary" role="heading">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
     </button>
-    <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
-          <i class="fas fa-home"></i>
-          <span translate>Home</span>
-        </a>
-        <a class="nav-item nav-link text-uppercase" routerLink="/about" routerLinkActive="active">
-          <i class="fas fa-question-circle"></i>
-          <span translate>About</span>
-        </a>
-      </div>
-      <div class="navbar-nav ml-auto">
-        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
-          <a id="language-dropdown" class="nav-link" ngbDropdownToggle>{{ currentLanguage }}</a>
-          <div ngbDropdownMenu aria-labelledby="language-dropdown">
-            <button class="dropdown-item" *ngFor="let language of languages" (click)="setLanguage(language)">
-              {{ language }}
-            </button>
-          </div>
-        </div>
-        <div class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
-          <a id="user-dropdown" class="nav-link" ngbDropdownToggle>
-            <i class="fas fa-user-circle"></i>
-          </a>
-          <div ngbDropdownMenu aria-labelledby="user-dropdown">
-            <h6 class="dropdown-header">
-              <span translate>Logged in as</span> <b>{{ username }}</b>
-            </h6>
-            <div class="dropdown-divider"></div>
-            <button class="dropdown-item" (click)="logout()" translate>Logout</button>
-          </div>
-        </div>
-      </div>
+    <button mat-button></button>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end">
+      <ul fxLaoyout fxLayoutGap="20px" class="navbar-nav ml-auto">
+        <li class="nav-item avatar dropdown">
+          <button
+            mat-icon-button
+            [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu"
+            class="btn btn-no-border nav-link dropdown-toggle text-white"
+          >
+            <img
+              src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg"
+              alt=""
+              class="img-fluid rounded-circle"
+              height="50px"
+              width="50px"
+            />
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Jhon</button>
+            <button mat-menu-item>Account Settings</button>
+            <button mat-menu-item>Change Password</button>
+            <button mat-menu-item>Log out</button>
+          </mat-menu>
+        </li>
+      </ul>
     </div>
-  </nav>
-</header>
+  </mat-toolbar-row>
+</mat-toolbar-row>

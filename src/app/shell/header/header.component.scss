@@ -1,9 +1,14 @@
-@import "src/theme/theme-variables";
-
-.navbar {
-  margin-bottom: $spacer;
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
-.nav-link.dropdown-toggle {
-  cursor: pointer;
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px 16px;
 }
