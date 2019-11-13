@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,19 +11,19 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$ng-x-rocket-primary: mat-palette($mat-indigo);
-$ng-x-rocket-accent: mat-palette($mat-pink, A200, A100, A400);
+$web-ux-primary: mat-palette($mat-indigo);
+$web-ux-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$ng-x-rocket-warn: mat-palette($mat-red);
+$web-ux-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$ng-x-rocket-theme: mat-light-theme($ng-x-rocket-primary, $ng-x-rocket-accent, $ng-x-rocket-warn);
+$web-ux-theme: mat-light-theme($web-ux-primary, $web-ux-accent, $web-ux-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($ng-x-rocket-theme);
+@include angular-material-theme($web-ux-theme);
 
 /*
  * Entry point of global application style.
@@ -44,5 +43,11 @@ $ng-x-rocket-theme: mat-light-theme($ng-x-rocket-primary, $ng-x-rocket-accent, $
 // Theme customization
 @import "theme/theme";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
